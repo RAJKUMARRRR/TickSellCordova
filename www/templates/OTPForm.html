@@ -1,0 +1,29 @@
+<ion-view title="OTP" id="page7">
+    <ion-content padding="true" class="has-header">
+        <div class="spacer" style="width: 300px; height: 80px;"></div>
+        <div class="row" style="margin-left: 40%">
+            <i class="icon ion-chatbubble-working" style="font-size: 60px;color: #BDBDBD"></i>  
+        </div>
+        <h5 id="oTP-heading5" style="color:#CF8435;text-align:center;">Sit back &amp; Relax! While we verify your mobile number</h5>
+        <h5 id="oTP-heading5" style="color:#CF8435;text-align:center;">({{form.mobile}})</h5>
+        <form id="oTP-form6" class="list">
+            <div id="oTP-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+                <p style="color:#000000;font-size:10px;">(Enter the otp if incase we failed to detect SMS authentication)</p>
+            </div>
+            <div class="spacer" style="width: 300px; height: 15px;"></div>
+            <div id="sellersList-container6" class="row">
+                <div class="col col-70">
+                    <label class="item item-input" id="oTP-input6" style="margin-left: 60px">
+                        <input type="tel" placeholder="OTP" ng-model="form.OTP" ng-change="onOTPTextChange()" ng-disabled="form.isOTPCorrect" >
+                    </label>
+                </div>
+                <div class="col col-30" style="margin-left: 10px">
+                    <button id="seller-buy" style="font-weight:600;" class="button  buttons-right button-assertive button-outline" ng-click="onOTPResendClick()" ng-disabled="form.isOTPCorrect">Resend</button>
+                </div>
+            </div>
+            <div class="spacer" style="width: 300px; height: 15px;"></div>
+        </form>
+        <p style="color: {{form.color}};text-align: center">{{form.errMessage}}</p>
+        <button id="oTP-button10" style="font-weight:600;border-radius:6px 6px 6px 6px;" class="button button-assertive button-block icon ion-ios-cloud-upload-outline" ng-click="onPublichClick()" ng-disabled="form.allowPublish"> Publish</button>
+    </ion-content>
+</ion-view>

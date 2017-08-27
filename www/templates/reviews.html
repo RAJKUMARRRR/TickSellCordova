@@ -1,0 +1,106 @@
+<ion-view title="Reviews" id="page_reviews">
+    <ion-content padding="true" class="has-header" style="background: #EEEEEE">
+        <form id="home-form1" class="list">
+            <label class="item item-input" id="home-search1" name="searchBarMainHome">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="Search for Movie,Language,Actor">
+            </label>
+        </form>
+        <!-------------------Commented Code----------------------->
+        <!--<ion-slides disable-side-menu-drag="" options="{'loop': true}" slider="slider1" delegate-handle="slider1" id="home-slider1" style="width:100%;height:200px;">
+        <ion-slide-page id="home-slide24" style="background:url(&quot;img/avfsZwJT9WGsBj982ul1_kitten1.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+        <ion-slide-page id="home-slide25" style="background:url(&quot;img/gHd5vedGQJu4s4qsPQvr_kitten2.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+        <ion-slide-page id="home-slide26" style="background:url(&quot;img/WE6rB9dZRTiIWQlP5qsA_kitten3.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+      </ion-slides>
+      <div class="spacer" style="width: 300px; height: 5%;"></div>
+      <button id="home-button2" style="font-weight:600;" class="button button-assertive button-block" ng-click="homeBuyOnClick()">Buy</button>
+      <button id="home-button3" style="font-weight:600;" class="button button-assertive button-block" ng-click="homeSellOnClick()">Sell</button>-->
+        <!----------------------------------------------------------->
+        <div class="list" style="padding: 0px">
+            <div class="col" style="background-color: #FFFFFF !important;margin-bottom: 5px" ng-repeat="movie in moviesList">
+                <div class="row row-80"  style="padding: 0px">
+                    <div  style="position:relative;">
+                        <img src="{{movie.alt_image}}" alt="" style="display: block; width: 100%; height: 100%">
+                        <div class="row row-center" style="position:absolute;width:100%;background-color: white;bottom:0;left:0;z-index:5;opacity: 0.8;">
+                            <div class="col col-50">
+                                <div class="row row-20">
+                                    <div class="col-20">
+                                        <i class="icon icon ion-thumbsup" style="font-size: 25px;color: {{movie.likedColor}}" ng-click="likeOnClick(movie)"></i>                                          
+                                    </div>
+                                    <div class="col-20" style="padding-left: 5px">
+                                        <h7 style="color: black">{{movie.likes}}</h7>                                        
+                                    </div>
+                                    <div class="col-60">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-50">
+                                <div class="row row-20" style="float: right">
+                                    <div class="col-60"></div>
+                                    <div class="col-20">
+                                        <h7 style="color: black">{{movie.dislikes}}</h7>                                        
+                                    </div>
+                                    <div class="col-20" style="padding-left: 15px">
+                                        <i class="icon ion-thumbsdown" style="font-size: 25px;color: {{movie.dislikedColor}}" ng-click="dislikeOnClick(movie)" ></i>                                        
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="background-color: white;padding: 0px">
+                    <div class="col col-center">
+                        <div class="row row-center" style="padding: 0px">
+                            <div class="col col-100" style="padding: 0px">
+                                <button  style="font-weight:600;" class="button  buttons-right button-assertive button-small" ng-click="onAddReviewClick(movie)">Write Review</button>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col col-60">
+                        <div class="row row-center" style="padding: 0px">
+                            <div class="col" style="padding: 0px">
+                                <h5 id="sellersList-heading3" class="balanced" align="right" style="font-weight:900;align-content: flex-end">{{movie.name}}</h5>
+                            </div>
+                        </div>
+                        <div class="row row-center" style="padding: 0px">
+                            <!--<rating ng-model="rating.rate" max="rating.max"></rating>-->
+                            <!--<div class="stars">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" ng-model="form.selectedChoice"/>
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-1"></label>
+                            </div>-->
+                            <div class="rating" ng-disabled="true">
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="star5" name="{{movie.id}}" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="star4half" name="{{movie.id}}" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="star4" name="{{movie.id}}" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="star3half" name="{{movie.id}}" value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="star3" name="{{movie.id}}" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="star2half" name="{{movie.id}}" value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="star2" name="{{movie.id}}" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="star1half" name="{{movie.id}}" value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="star1" name="{{movie.id}}" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                                <input  ng-disabled="true" ng-model="movie.rating" type="radio" id="starhalf" name="{{movie.id}}" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-80">
+                    <h5 style="text-align: center;font-weight: bold">Nice movie but bit boring due to the lack in the screenplay and dullness in the dialogues...</h5>
+                    </div>
+                    <div class="col col-20">
+                        <button id="seller-buy" style="font-weight:600;display: table-cell" class="button  buttons-right button-assertive button-outline icon ion-arrow-right-c" ng-click="listReviewsOnClick(movie)"></button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </ion-content>
+</ion-view>
+

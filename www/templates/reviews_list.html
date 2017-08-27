@@ -1,0 +1,25 @@
+<ion-view title="Reviews" id="page_reviews_list">
+    <ion-content padding="true" class="has-header" style="background: #EEEEEE">
+        <ion-list>
+            <ion-item ng-repeat="review in reviewsList">
+                <h4 align="right"  style="padding-right: 10px">{{formatTimeStamp(review.timestamp)}}</h4>
+                <div class="row">
+                    <div class="col col-20">
+                        <div class="profile-image">
+                            <img src="{{review.image_url}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+                        </div>
+
+                    </div>
+                    <div class="col col-60">
+                        <h2>{{review.user_name}}</h2>
+                        <p>{{review.analysis}}</p>                        
+                    </div>
+                    <div class="col col-20" style="padding: 0px">
+                        <button  style="font-weight:600;display: table-cell" class="button  buttons-right button-assertive button-outline" ng-click="onViewClick(review)">View</button>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>    
+    </ion-content>
+</ion-view>
+

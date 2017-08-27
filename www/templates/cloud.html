@@ -1,0 +1,6 @@
+<ion-view title="Trailers" id="page3">
+  <ion-content padding="true" class="has-header"></ion-content>
+        <div class="scroll" style="padding: 10px;padding-top: 50px">
+            <iframe  ng-repeat="movie in moviesList"  width="100%" height="360" src="{{movie.trailer_link}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+</ion-view>

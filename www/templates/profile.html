@@ -1,0 +1,52 @@
+<ion-view title="MyProfile" id="page_profile">
+    <ion-content padding="false">
+        <div class="spacer" style="width: 0px; height: 0px;"></div>
+        <div  style="position:relative; padding: 0px">
+            <img src="img/bg.jpg" alt="" style="display: block; width: 100%; height: 150px">
+            <div class="row row-center" style="position:absolute;height: 100%;width:100%;top:50%;left:0;z-index:5;">
+                <div class="profile-image" style="width: 100%">
+                    <img src="{{form.imageUrl}}" style="display: block; width: 25%; height: auto; margin-left: auto; margin-right: auto;border: 0px;">
+                </div>
+            </div>
+        </div>
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+        <div class="col" style="padding-left: 10%" ng-hide="!profile.isLoggedIn">
+            <div class="row">
+                <div class="col col-20" style="font-size: 30px">
+                    <i class="icon ion-person"></i></ion-item>                            
+                </div>
+                <div class="col col-80">
+                    <h5>{{form.displayName}}</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-20" style="font-size: 30px">
+                    <i class="icon ion-android-call"></i></ion-item>                            
+                </div>
+                <div class="col col-80">
+                    <h5>8501096987</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-20" style="font-size: 30px">
+                    <i class="icon ion-email"></i></ion-item>                            
+                </div>
+                <div class="col col-80">
+                    <h5>{{form.email}}</h5>
+                </div>
+            </div>
+           <div class="spacer" style="width: 300px; height: 60px;"></div>
+            <div class="row">
+                <div class="col col-50" style="font-size: 30px">
+                    <button  style="font-weight:600;display: table-cell" class="button  buttons-right button-assertive button-outline icon ion-compose"> My Reviews</button>
+                </div>
+                <div class="col col-50" style="font-size: 30px">
+                    <button  style="font-weight:600;display: table-cell" class="button  buttons-right button-assertive button-outline icon ion-ios-film-outline"> My Sells</button>
+                </div>
+            </div>
+        </div>
+        <div class="col" ng-hide="profile.isLoggedIn">
+            <button  style="font-weight:600;" class="button button-assertive button-block" ng-click="onLoginClick()">Login</button>
+        </div>
+    </ion-content>
+</ion-view>

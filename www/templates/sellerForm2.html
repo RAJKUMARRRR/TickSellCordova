@@ -1,0 +1,41 @@
+<ion-view title="Sell" id="DetailsEntry2">
+    <ion-content padding="true" class="has-header" style="background: #EEEEEE">
+        <form id="personalDetails-form5" class="list">
+            <label class="item item-input" id="personalDetails-input3">
+                <input type="Number" placeholder="Number Of Tickets" ng-model="form.numberOfTickets">
+            </label>
+            <div class="spacer" style="width: 300px; height: 15px;"></div>
+            <label class="item item-input" id="personalDetails-input4">
+                <input type="Number" placeholder="Amount in Rupees" ng-model="form.amount">
+            </label>
+            <div class="spacer" style="width: 300px; height: 15px;"></div>
+            <label class="item item-input" id="personalDetails-input4">
+                <input type="date" placeholder="Date" ng-model="form.date">
+            </label>
+        </form>
+        <!---------------------------------Choose Time Code------------------->
+        <div class="col" style="padding: 10px;background-color: #FFFFFF !important;margin-bottom: 5px">
+            <div class="row row-25">
+                <div class="col">
+                    <div class="row row-20">
+                        <h5 id="sellerDetailsHeader1" class="balanced" align="right" style="font-weight:900;align-content: flex-end">{{showTimes.showText}}</h5>                                
+                    </div>
+                    <div class="row row-80">
+                        <div class="col">
+                                <ion-radio id="choice.id" ng-repeat="choice in showTimes.choices" ng-model="form.selectedChoice" ng-value="choice.text">{{choice.text}}</ion-radio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="color: red;text-align: center">{{form.errMessage}}</p>
+        <!---------------------------------Next Button Code------------------->
+        <div class="col" >
+            <div class="row row-25">
+                <div class="col">
+                    <button id="form2-Publish" style="font-weight:600;" class="button button-assertive button-block" ng-click="showPopup()">PROCEED</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

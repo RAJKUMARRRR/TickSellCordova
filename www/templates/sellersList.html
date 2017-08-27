@@ -1,0 +1,31 @@
+<ion-view title="SellersList" id="page2">
+    <ion-content padding="true" class="has-header" style="background: #EEEEEE">
+        <div class="list">
+            <div class="col" style="padding: 10px;background-color: #FFFFFF !important;margin-bottom: 5px" ng-repeat="item in listItems">
+                <div class="row row-10">
+                                <h5 id="sellersList-heading3" class="balanced" align="right" style="font-weight:900;align-content: flex-end">{{item.header1}}</h5>
+                </div>
+                <div class="row row-90" style="background-color: #FFF3E0 !important">
+                    <div class="col">
+                        <div id="sellersList-container6" class="row row-90" >
+                            <div class="col col-70">
+                                <p id="sellersList-heading3" style="color:#000000;font-weight:200;">{{item.header4}}</p>
+                            </div>
+                            <div class="col col-30" >
+                                <h5 id="sellersList-heading3" class="balanced" align="right" style="font-weight:900;align-content: flex-end">{{item.header2}}</h5>
+                            </div>
+                        </div>
+                        <div id="sellersList-container6" class="row row-10" >
+                            <div class="col col-80">
+                                <h5 id="sellersList-heading3" style="color:#E65100;font-weight:600;">Tickets:{{item.header3}}</h5>
+                            </div>
+                            <div class="col col-80" style="margin-left: 10px">
+                                <button id="seller-buy" style="font-weight:600;" class="button  buttons-right button-assertive button-outline" ng-click="buyOnClick(item)">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </ion-content>
+</ion-view>

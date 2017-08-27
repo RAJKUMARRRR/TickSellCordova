@@ -1,0 +1,24 @@
+<ion-view title="Personal Details" id="personalDetails">
+  <ion-content padding="true" class="has-header">
+      <div class="spacer" style="width: 300px; height: 40px;"></div>
+      <div class="row" style="margin-left: 40%">
+       <i class="icon ion-chatbubble-working" style="font-size: 60px;color: #BDBDBD"></i>  
+    </div>
+    <h5 id="personalDetails-heading4" style="color:#CF8435;text-align:center;">Enter your mobile number to get publish</h5>
+    <form id="personalDetails-form5" class="list">
+      <label class="item item-input" id="personalDetails-input3">
+          <input type="text" placeholder="Name" ng-model="form.name">
+      </label>
+      <div class="spacer" style="width: 300px; height: 15px;"></div>
+      <label class="item item-input" id="personalDetails-input4">
+          <input type="email" placeholder="Email" ng-model="form.email">
+      </label>
+      <div class="spacer" style="width: 300px; height: 15px;"></div>
+      <label class="item item-input" id="personalDetails-input5">
+          <input type="tel" placeholder="Mobile" ng-model="form.mobile">
+      </label>
+    </form>
+    <p style="color: red;text-align: center">{{form.errMessage}}</p>
+    <button id="personalDetails-button9" style="font-weight:600;border-radius:6px 6px 6px 6px;" class="button button-assertive button-block" ng-click="personalDetailsNextClick()">PROCEED</button>
+  </ion-content>
+</ion-view>

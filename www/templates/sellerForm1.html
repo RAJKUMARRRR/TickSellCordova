@@ -1,0 +1,79 @@
+<ion-view title="Sell" id="DetailsEntry1">
+    <ion-content padding="true" class="has-header" style="background: #EEEEEE">
+        <!---------------------------------Choose City Code------------------->
+        <div class="col" style="padding: 10px;background-color: #FFFFFF !important;margin-bottom: 5px">
+            <div class="row row-25">
+                <div class="col">
+                    <div class="row row-20">
+                        <h5 id="sellerDetailsHeader1" class="balanced" align="right" style="font-weight:900;align-content: flex-end">Choose City</h5>                                
+                    </div>
+                    <div class="row row-80" >
+                        <div class="col">
+                            <label class="item item-select" id="page-select1">
+                                <span class="input-label">Select</span>
+                                <select ng-model="form.selectedCity" ng-options="city.key as city.value for city in citiesList" ng-change="onCitySelection(form.selectedCity)">
+                                    <!-------<option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>--------->
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------Choose Name Code------------------->
+        <div class="col" style="padding: 10px;background-color: #FFFFFF !important;margin-bottom: 5px">
+            <div class="row row-25">
+                <div class="col">
+                    <div class="row row-20">
+                        <h5 id="sellerDetailsHeader1" class="balanced" align="right" style="font-weight:900;align-content: flex-end">Choose Hall</h5>                                
+                    </div>
+                    <div class="row row-80" >
+                        <div class="col">
+                            <label class="item item-select" id="page-select1">
+                                <span class="input-label">Select</span>
+                                <select ng-model="form.selectedHall" ng-options="hall.key as hall.value for hall in hallsList">
+                                    <!-----<option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>----->
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------Choose Time Code------------------->
+        <div class="col" style="padding: 10px;background-color: #FFFFFF !important;margin-bottom: 5px">
+            <div class="row row-25">
+                <div class="col">
+                    <div class="row row-20">
+                        <h5 id="sellerDetailsHeader1" class="balanced" align="right" style="font-weight:900;align-content: flex-end">Choose Language</h5>                                
+                    </div>
+                    <div class="row row-80" >
+                        <div class="col">
+                            <label class="item item-select" id="page-select1">
+                                <span class="input-label">Select</span>
+                                <select ng-model="form.selectedLanguage" ng-options="language.key as language.value for language in languagesList">
+                                    <!-----<option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>----->
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="color: red;text-align: center">{{form.errMessage}}</p>
+        <!---------------------------------Next Button Code------------------->
+        <div class="col" >
+            <div class="row row-25">
+                <div class="col">
+                    <button id="form1-Next" style="font-weight:600;" class="button button-assertive button-block" ng-click="form2PublishClick()">PROCEED</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

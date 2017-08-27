@@ -1,0 +1,52 @@
+<ion-view title="Movies" id="page1">
+    <ion-content padding="true" class="has-header" style="background: #EEEEEE">
+        <form id="home-form1" class="list">
+            <label class="item item-input" id="home-search1" name="searchBarMainHome">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="Search for Movie,Language,Actor">
+            </label>
+        </form>
+        <!-------------------Commented Code----------------------->
+        <!--<ion-slides disable-side-menu-drag="" options="{'loop': true}" slider="slider1" delegate-handle="slider1" id="home-slider1" style="width:100%;height:200px;">
+        <ion-slide-page id="home-slide24" style="background:url(&quot;img/avfsZwJT9WGsBj982ul1_kitten1.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+        <ion-slide-page id="home-slide25" style="background:url(&quot;img/gHd5vedGQJu4s4qsPQvr_kitten2.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+        <ion-slide-page id="home-slide26" style="background:url(&quot;img/WE6rB9dZRTiIWQlP5qsA_kitten3.jpg&quot;) no-repeat center;background-size:cover;"></ion-slide-page>
+      </ion-slides>
+      <div class="spacer" style="width: 300px; height: 5%;"></div>
+      <button id="home-button2" style="font-weight:600;" class="button button-assertive button-block" ng-click="homeBuyOnClick()">Buy</button>
+      <button id="home-button3" style="font-weight:600;" class="button button-assertive button-block" ng-click="homeSellOnClick()">Sell</button>-->
+        <!----------------------------------------------------------->
+        <div class="list" style="padding: 0px">
+            <div class="col" style="background-color: #FFFFFF !important;margin-bottom: 5px" ng-repeat="movie in moviesList">
+                <div class="row row-80"  style="padding: 0px">
+                    <img src="{{movie.alt_image}}" alt="" style="display: block; width: 100%; height: 80%">
+                </div>
+                <div class="row" style="background-color: white;padding: 0px">
+                    <div class="col col-60">
+                        <div class="row row-center" style="padding: 0px">
+                            <div class="col" style="padding: 0px">
+                                <h5 id="sellersList-heading3" class="balanced" align="left" style="font-weight:900;align-content: flex-end">{{movie.name}}</h5>
+                            </div>
+                        </div>
+                        <div class="row row-center" style="padding: 0px">
+                            <h5 id="sellersList-heading3" class="stable" align="left" style="font-weight:900;align-content: flex-end;color: grey">{{movie.language}}</h5>
+                            <h5 id="sellersList-heading3" class="stable" align="left" style="font-weight:900;align-content: flex-end;margin-left: 5%;color: grey;border-radius:300px 300px 300px 300px;border: solid grey;padding: 5px">{{movie.screen}}</h5>
+                            <h5 id="sellersList-heading3" class="stable" align="left" style="font-weight:900;align-content: flex-end;margin-left: 5%;color: grey">{{movie.certificate}}</h5>
+                        </div>                
+                    </div>
+                    <div class="col col-center">
+                        <div class="row row-center">
+                            <div class="col col-50">
+                                <button id="seller-buy" style="font-weight:600;display: table-cell" class="button  buttons-right button-assertive button-outline icon ion-search"  ng-click="homeBuyOnClick(movie)"></button>
+                            </div>
+                            <div class="col col-50">
+                                <button id="seller-buy" style="font-weight:600;" class="button  buttons-right button-assertive button-outline" ng-click="homeSellOnClick(movie)">Sell</button>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </ion-content>
+</ion-view>
+

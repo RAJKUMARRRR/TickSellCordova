@@ -1,0 +1,37 @@
+<ion-view title="Login" hide-nav-bar="true" id="page_login">
+  <!--<ion-content padding="true" style="background: url(img/ORuJd3OTZ2RPSKtbpJpg_1.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">-->
+  <ion-content padding="true" style="background: url(img/background7.jpeg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <div>
+      <img src="img/k0kzFJaSdC9JgPM6yNNS_ticksell_logo.png" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <div class="spacer" style="width: 300px; height: 26px;"></div>
+    <form id="login-form1" class="list" style="opacity: 0.5">
+      <ion-list id="login-list1">
+          <label class="item item-input" id="login-input1" >
+              <input type="email" placeholder="Email" ng-model="login.email">
+        </label>
+        <div class="spacer" style="width: 300px; height: 2px;"></div>
+        <label class="item item-input" id="login-input2">
+            <input type="password" placeholder="Password" ng-model="login.password">
+        </label>
+      </ion-list>
+      <div class="spacer" style="width: 300px; height: 22px;"></div>
+      <button id="login-button1" class="button button-stable button-block" ng-click="onLoginClick()">Log in</button>
+      <a href-inappbrowser="/signup" id="login-button2" class="button button-positive button-block button-clear">Or create an account</a>
+    </form>
+    <div class="spacer" style="width: 300px; height: 100px;"></div>
+    <div class="col">
+        <div class="col">
+            <div class="row"> 
+                <button id="form2-Publish" style="font-weight:600;" class="button button-light button-outline button-block icon ion-social-googleplus" ng-click="onGoogleLoginClick()"> Sign through Google</button>
+            </div>
+            <div class="row"> 
+                <button id="form2-Publish" style="font-weight:600;" class="button button-light button-outline button-block icon ion-social-facebook" ng-click="onFacebookLoginClick()"> Sign through Facebook</button>
+            </div>
+            <div class="row"> 
+                <button id="login-button2" class="button button-positive button-block button-clear" ng-click="skipOnClick()">Skip</button>
+            </div>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>
